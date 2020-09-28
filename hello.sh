@@ -1,6 +1,6 @@
 #!/bin/bash
 
 echo "Git is awesome"
-echo $(whomi) is logged into $(hostname)
+echo $(whoami) is logged into $(hostname)
 
 
