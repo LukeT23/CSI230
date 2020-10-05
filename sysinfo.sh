@@ -100,6 +100,7 @@ show_uptime()
         echo "</pre>"
 }
 
+#brief   Display how much space is used by each user in the home directory
 
 home_space()
 {
@@ -128,10 +129,10 @@ cat <<- _EOF_
 	$(memory)
 	$(diskDevices)
 	$(drive_space)
-        $(show_uptime)
-        $(home_space)
 	$(users_info)
         $(network_info)
+	$(show_uptime)
+        $(home_space)
 
         </body>
         </html>
