@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#!/bin/bash
+
 # sysinfo_page - A scipt to produce HTML file 
 
 ######VARIABLES 
@@ -9,13 +11,17 @@ TIME_STAMP="Updated on $RIGHT_NOW by $USER"
 
 ######FUNCTIONS 
 
+#brief:   Display the systems distribution info
+
 distribution_info()
 {
 	echo "<h2>Distribution  info</h2>"     
 	echo "<p>"
-	cat /etc/lsb-release.diverted | grep DISTRIB_DESCRIPTION
+	cat /etc/lsb-release.diverted | grep DISTRIB_DESCRIPTION | cut -d  "=" -f 2
 	echo "</p>"
 }
+
+#brief   Display the systems kernel 
 
 kernel_info()
 {
@@ -25,6 +31,8 @@ kernel_info()
 	echo "<p>"
 }
 
+#brief   Display the systems memory 
+
 memory()
 {
 	echo "<h2>Memory</h2>"
@@ -33,6 +41,8 @@ memory()
 	echo "</p>"
 }
 
+#brief   Display the disks on the system
+
 diskDevices()
 {
         echo "<h2>Disk Devices</h2>"
@@ -40,6 +50,8 @@ diskDevices()
         fdisk -l
         echo "</p>"
 }
+
+#brief   Display the systems drive space (used and available)
 
 drive_space()
 {
@@ -50,13 +62,31 @@ drive_space()
 
 }
 
-users()
+#brief   Display the systems users along with IDs and group IDs
+
+users_info()
 {
 	echo "<h2>Users</h2>"
 	echo "<pre>"
-#	for users in $(cat /etc/passwd | grep bash | cut -d":" -f 1); do users;  id $users; done 
+	for user in $(cat /etc/passwd | grep bash | cut -d":" -f 1); do users;  id $user; done 
 	echo "</pre>"
 }
+
+#brief   Display the devices network information to include name, status, and ip address
+
+network_info()
+{
+        echo "<h2>Network Information</h2>"
+        echo "<pre>"
+ip addr | grep 2: | cut -d ":" -f 2
+ip addr | grep fq_codel | cut -d " " -f 9
+hostname -I
+        echo "</pre>"
+}
+
+
+
+#brief   Display how long the system has been up for
 
 show_uptime()
 {
@@ -86,8 +116,6 @@ cat <<- _EOF_
                 $title $HOSTNAME
                 </title>
         </head>
-
-
        <body> 
         <h1> $title $HOSTNAME</h1>
         <p>$TIME_STAMP</p>
@@ -98,11 +126,13 @@ cat <<- _EOF_
 	$(drive_space)
         $(show_uptime)
         $(home_space)
-#	$(users)
+	$(users_info)
+        $(network_info)
 
         </body>
         </html>
 _EOF_
+
 
 
 
