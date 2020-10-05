@@ -1,6 +1,10 @@
 #!/bin/bash
 
-#!/bin/bash
+# Html Script
+# brief  Our First Script of creating an html page to be viewed on a web server 
+# author Luke E. Tatro
+# Html script
+# date 10/5/2020
 
 # sysinfo_page - A scipt to produce HTML file 
 
@@ -68,7 +72,7 @@ users_info()
 {
 	echo "<h2>Users</h2>"
 	echo "<pre>"
-	for user in $(cat /etc/passwd | grep bash | cut -d":" -f 1); do users;  id $user; done 
+	for user in $(cat /etc/passwd | grep bash | cut -d":" -f 1); do echo  $user;  id $user; done 
 	echo "</pre>"
 }
 
