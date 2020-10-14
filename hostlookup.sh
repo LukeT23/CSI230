@@ -1,7 +1,16 @@
 #!/bin/bash
-#comments go here
+# Host name lookup Script
+# brief  A script that will look up hostnames in a specified file and print the host names ip addresses  
+# author Luke E. Tatro
+# Host name look up Script
+# date 10/14/2020
+
+#brief   A positional parameter that will read in a text file entered by the user
 
 PROGNAME="$(basename "$0")"
+
+#brief   An if statement to check if the file is an existing file or not
+#        If it is a while loop will grap the host names and find their ip addresses
 
 if [ -e "$1" ]; then 
   for h in $(cat "$1"); 
