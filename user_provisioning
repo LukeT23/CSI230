@@ -32,14 +32,17 @@ checkRoot
 if [ -e "$1" ]; then 
  for user in $(cat "$1"| cut -d"@" -f 1); 
   do echo  $user;  
-     $(useradd $user -m -p $(openssl passwd -1 $password) -s /bin/bash); 
+     password=$(openssl rand -base64 10);   
+     echo $password
+     $(useradd $user -m -p $(openssl passwd -1 $password) -s /bin/bash);
+     chage -d 0 $user;
+     usermod -a -G CSI230 $user;  
  done
 else 
-  echo "Did not work" 
+  echo "File ${1} does not exist. Please use a different file." 
 fi 
 
 
-#for user in $(cat /home/luketatro/bin/emails.txt | cut -d"@" -f 1); do echo  $user; done
 
 echo " " 
 echo " " 
