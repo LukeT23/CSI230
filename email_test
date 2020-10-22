@@ -1,0 +1,60 @@
+#!/bin/bash
+
+hashPass="rkfm fixq spkh nphc"
+
+usage()
+{
+ echo "program is running"  
+}
+
+checkRoot()
+{
+  userid=$(id -u)
+  echo "The current user is: $(whoami)"
+
+  if [ "$userid" -eq 0 ]; then
+    echo "You are logged in as root" 
+  else 
+    echo "$(whoami) is not root"
+    echo "You must be root to execute this program" 
+    exit 1 
+  fi
+
+}
+
+
+
+
+#MAIN
+
+PROGNAME="$basename"$0")" 
+
+checkRoot
+
+
+
+if [ -e "$1" ]; then 
+for user in $(cat "$1"| cut -d"@" -f 1);
+  do   
+     password=$(openssl rand -base64 10);   
+    # echo $password
+	userEmail="$(cat "$1" | grep $user)"
+	echo $user
+	echo $userEmail
+	email_body="Your password is $password and your user name is $user"
+	email_subject="Info" 
+	echo -e "${email_body}" | s-nail -S smtp-use-starttls -S ssl-verify=ignore -S smtp-auth=login 
+	-S smtp="smtp.gmail.com:587" -S smtp-auth-user="lukeetatro@gmail.com" 
+	-S smtp-auth-password="${hashPass}" -r lukeetatro@gmail.com -s "${email_subject}" -. "${userEmail}"
+
+ done
+else 
+  echo "File ${1} does not exist. Please use a different file." 
+fi 
+
+
+
+echo " " 
+echo " " 
+usage
+

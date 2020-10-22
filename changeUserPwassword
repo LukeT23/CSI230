@@ -31,45 +31,26 @@ checkRoot
 
 if [ -e "$1" ]; then 
  for user in $(cat "$1"| cut -d"@" -f 1); 
-  do echo  $user;  
-
+  do echo  $user;
+   
     password=$(openssl rand -base64 12); 
       echo $password
       echo "Checking to see if user exists already" 
       echo " " 
       cat /etc/passwd | grep ${user};
-
-      if [ $? -eq 0 ]; then
-	echo " "  
+      
+      if [ $? -eq 0 ]; then 
         echo "User already exists. Changing password to $password" 
-        echo "$user:$password" | chpasswd; 
+	echo "$user:$password" | chpasswd; 
         chage -d 0 $user;
-
+          
       else 
-          $(useradd $user -m -p $(openssl passwd -1 $password) -s /bin/bash); 
+	  $(useradd $user -m -p $(openssl passwd -1 $password) -s /bin/bash); 
           chage -d 0 $user;
           usermod -a -G CSI230 $user;
           echo "${user} has been added" 
       fi 
-
-
-
-
-#     password=$(openssl rand -base64 10);   
-#     echo $password
-#     $(useradd $user -m -p $(openssl passwd -1 $password) -s /bin/bash);
-#     chage -d 0 $user;
-#     usermod -a -G CSI230 $user;  
-	hashPass="rkfm fixq spkh nphc"
-        userEmail="$(cat "$1" | grep $user)"
-        echo $user
-        echo $userEmail
-        email_body="Your password is $password and your user name is $user"
-        email_subject="Info" 
-        echo -e "${email_body}" | s-nail -S smtp-use-starttls -S ssl-verify=ignore -S smtp-auth=login -S smtp="smtp.gmail.com:587" -S smtp-auth-user="lukeetatro@gmail.com" -S smtp-auth-password="${hashPass}" -r "${userEmail}"  -s "${email_subject}" -. "${userEmail}"
-
-
-
+     
  done
 else 
   echo "File ${1} does not exist. Please use a different file." 
