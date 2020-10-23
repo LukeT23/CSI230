@@ -1,10 +1,15 @@
 #!/bin/bash
 
-usage()
-{
- echo "program is running"  
-}
+# User provisioning Script
+# brief  create a script that will extract emails from a txt file, create users and passwords, and email the user their crednetials  
+# author Luke E. Tatro
+# User provisioning Script
+# date 10/22/2020
 
+# user_provisioning 
+
+
+#brief   funtion to make sure the user is the root user
 checkRoot()
 {
   userid=$(id -u)
@@ -14,70 +19,67 @@ checkRoot()
     echo "You are logged in as root" 
   else 
     echo "$(whoami) is not root"
-    echo "You must be root to execute this program" 
+    echo "You must be root to execute this program" >&2
     exit 1 
   fi
 
 }
 
 
-
-
 #MAIN
+
+#brief   code to request user to enter in the hash password for the attached email account 
+echo "Enter your hash password" 
+read -s hashPass 
+echo " " 
 
 PROGNAME="$basename"$0")" 
 
 checkRoot
 
+#brief   beginning of loop to extracts users from the email txt file 
+
 if [ -e "$1" ]; then 
  for user in $(cat "$1"| cut -d"@" -f 1); 
   do echo  $user;  
 
+#brief   password is created
+
     password=$(openssl rand -base64 12); 
-      echo $password
+
+#brief   check to make sure user does not exits
       echo "Checking to see if user exists already" 
       echo " " 
       cat /etc/passwd | grep ${user};
 
+
+#brief   if user exists change their password 
       if [ $? -eq 0 ]; then
 	echo " "  
-        echo "User already exists. Changing password to $password" 
+        echo "User already exists. Changing ${user}'s password" 
         echo "$user:$password" | chpasswd; 
-        chage -d 0 $user;
 
+#brief   if user does not exist create the user 
       else 
           $(useradd $user -m -p $(openssl passwd -1 $password) -s /bin/bash); 
-          chage -d 0 $user;
-          usermod -a -G CSI230 $user;
           echo "${user} has been added" 
       fi 
 
+#brief   require user to change password at next log in and add the to the CSI230 group
+          chage -d 0 $user;
+          usermod -a -G CSI230 $user;
 
-
-
-#     password=$(openssl rand -base64 10);   
-#     echo $password
-#     $(useradd $user -m -p $(openssl passwd -1 $password) -s /bin/bash);
-#     chage -d 0 $user;
-#     usermod -a -G CSI230 $user;  
-	hashPass="rkfm fixq spkh nphc"
+#brief   email the user their credentials 
         userEmail="$(cat "$1" | grep $user)"
         echo $user
         echo $userEmail
         email_body="Your password is $password and your user name is $user"
-        email_subject="Info" 
-        echo -e "${email_body}" | s-nail -S smtp-use-starttls -S ssl-verify=ignore -S smtp-auth=login -S smtp="smtp.gmail.com:587" -S smtp-auth-user="lukeetatro@gmail.com" -S smtp-auth-password="${hashPass}" -r "${userEmail}"  -s "${email_subject}" -. "${userEmail}"
-
-
+        email_subject="Credentials" 
+        echo -e "${email_body}" | s-nail -S smtp-use-starttls -S ssl-verify=ignore -S smtp-auth=login -S smtp="smtp.gmail.com:587" -S smtp-auth-user="lukeetatro@gmail.com" -S smtp-auth-password="${hashPass}" -r "lukeetatro@gmail.com"  -s "${email_subject}" -. "${userEmail}"
 
  done
 else 
-  echo "File ${1} does not exist. Please use a different file." 
+  echo "File ${1} does not exist. Please use a different file." >&2 
 fi 
 
-
-
-echo " " 
-echo " " 
-usage
 
