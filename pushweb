@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# file pull.sh
+# brief  used to push apache content to a remote server using rsyinc
+# author: Luke Tatro
+# coauthor bilbo.baggins 
+# Lab 9 scheduled tasks 
+# Date 10/30/2020
+
+#constants 
+
+AWSHOST="ec2-54-197-206-60.compute-1.amazonaws.com" 
+AWSUSER="push-web" 
+LOCALDIR="web-content" 
+
+#Change to working directory 
+
+cd /root/cron-lab
+
+#Rsync 
+
+rsync -e "ssh -i keys/push-web" -vraO --no-perms --delete --chmod=660 --chown=push-web:www-data "${LOCALDIR}/" "${AWSUSER}@${AWSHOST}":
+
+#Write an entry to syslog
+
+logger -t $0 "Web content pushed to ${AWSHOST}" 
+
+#Email starts here 
+
+     userEmail="luke.tatro@mymail.champlain.edu"
+     email_body="The hourly cron pushweb has run"
+     email_subject="hourly cron" 
+     hashPass="XXXX XXXX XXXX XXXX" # Add hash pass 
+
+     
+     echo -e "${email_body}" | s-nail -S smtp-use-starttls \
+	-S ssl-verify=ignore \
+	-S smtp-auth=login \
+	-S smtp="smtp.gmail.com:587" \
+	-S smtp-auth-user="lukeetatro@gmail.com" \
+	-S smtp-auth-password="${hashPass}" -r "lukeetatro@gmail.com" -s "${email_subject}" -. "${userEmail}"
+
