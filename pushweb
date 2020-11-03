@@ -28,7 +28,7 @@ logger -t $0 "Web content pushed to ${AWSHOST}"
 #Email starts here 
 
      userEmail="luke.tatro@mymail.champlain.edu"
-     email_body="The hourly cron pushweb has run"
+     email_body="Web content pushed to ${AWSHOST}"
      email_subject="hourly cron" 
      hashPass="XXXX XXXX XXXX XXXX" # Add hash pass 
 
