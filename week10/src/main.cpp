@@ -1,8 +1,7 @@
 /**
 * @file week10.cpp
-* @brief  Week 10, C++ Review and Warmup from CSI140
-*
-* @author Bilbo Baggins
+* @brief  Week 10, C++ Review and Warmup from CSI230 
+* @author Luke E. Tatro
 * @assignment Lecture 10.1
 * @date 10/26/2020
 * @credits
@@ -48,5 +47,7 @@ int main()
     cout << "Lowest of the doubles: " << lowest(myDoubles) << endl << endl;  
     cout << "Here are the words: " << birdie << endl; 
     cout << "Words written by a Marine with a crayon: " << camelCase(birdie) << endl; 
+
+    return EXIT_SUCCESS; 
     
 }
