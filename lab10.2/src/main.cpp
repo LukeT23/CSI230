@@ -15,6 +15,7 @@
 #include <unistd.h>
 #include <libgen.h>
 #include "util.hpp"
+#include "earth_utils.hpp"
 
 using namespace std; 
 
@@ -71,6 +72,33 @@ int main(int argc, char* argv[])
                 log(msg, programName, flog); 
                 optErr = false;
                 flog.close(); 
+                //this is where we will parse the csv file 
+                //will open mykmlcsv file and open it and test it. 
+                ifstream inFile; 
+                inFile.open(kmlValue); 
+                if(inFile)
+                {
+                    int recordCount = processCSV(inFile, kmlValue + ".kml"); 
+                    //the mklValue is our concap.csv 
+                    inFile.close(); 
+                    if(recordCount)
+                    {
+                        cout << recordCount << " records processed" << endl; 
+                        optErr=false; 
+                    }
+
+                    else 
+                    {
+                        optErr = true; 
+                    }
+                }
+                else
+                {
+                    {
+                        optErr = true; 
+                    }
+                }
+                
             }
             else
             {

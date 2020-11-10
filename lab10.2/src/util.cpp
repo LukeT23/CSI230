@@ -13,6 +13,7 @@
 
 #include <iostream>
 #include <string>
+#include <sstream>
 #include <ctime> 
 #include <unistd.h>
 #include "util.hpp"
@@ -20,6 +21,7 @@
 
 bool log(std::string msg, std::string programName, std::ofstream& logFile)
 {
+	bool retVal = false; 
 	std::string strTime; 
 
 	//get the time 
@@ -42,15 +44,20 @@ bool log(std::string msg, std::string programName, std::ofstream& logFile)
 	//get the hostname (I haven't shown you this) used a function called gethostname 
 	//get host name takes a char pointer and a length of bits. 
 	std::string strHostName; 
-	char* name;
-	gethostname(name, 10); 
+	char hName[256];
+	gethostname(hName, 10); 
+
+	strHostName = hName; 
 	
 	if (logFile)
 	{
+		
 		//write the log
 		// add pid after the program name so that it looks like:    program[pid]
-		//log file << strTime << strHostname << " " << strProgramName << "[" << pid << "]: " << msg << std::endl; 
+		logFile << strTime << strHostName << " " << programName << "[" << pid << "]: " << msg << std::endl; 
 
-		return true; 
+		retVal = true; 
 	}
+
+	return retVal; 
 }

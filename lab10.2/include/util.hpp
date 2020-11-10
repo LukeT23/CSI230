@@ -15,6 +15,7 @@
 #define UTIL_HPP
 #include <string>
 #include <fstream>
+#include <sstream>
 
 /**
 * @brief creates a discrete syslog message
