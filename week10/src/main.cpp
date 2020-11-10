@@ -10,6 +10,7 @@
 
 #include <iostream>
 #include <vector>
+#include <unistd.h> 
 #include <ctime>
 #include "util.hpp"
 
@@ -47,6 +48,14 @@ int main()
     cout << "Lowest of the doubles: " << lowest(myDoubles) << endl << endl;  
     cout << "Here are the words: " << birdie << endl; 
     cout << "Words written by a Marine with a crayon: " << camelCase(birdie) << endl; 
+
+    cout << endl; 
+
+    char name[256]; 
+    // << a character array to a 
+    gethostname(name, 10); 
+
+    cout << endl << name << endl; 
 
     return EXIT_SUCCESS; 
     
