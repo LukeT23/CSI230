@@ -10,45 +10,60 @@
 * 
 */
 
-#include "earth_utils.hpp"
-#include <sstream> //will be used for line parsing 
+#include "earth_utils.h"
+#include <sstream> 
+#include <fstream> 
 #include <iostream> 
 
+ 
+ 
 int processCSV(std::ifstream& inFile, std::string kmlFileName)
 {
     std::string strCountry, strCapital, strLat, strLong; 
-    std::string strLine; //represents the entire line in a csv file 
+    std::string strLine; 
+    std::string name; 
     int recordCount{}; 
 
-    //if infile doesn't exist, bail returning records written
-    // if does exists
-    //create the kmlFile
-    //write out the header 
-    //read each line in the inFile, skipping the first one 
     if(inFile)
     {
         getline(inFile, strLine); 
-        //std::cout << strLine << std::endl; //debugging only 
-        ///will later put this in a loop to see if recrods are being read ok
+
+        std::ofstream outFile; 
+
+        outFile.open(kmlFileName); 
+        outFile << "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" << std::endl; 
+        outFile << "<kml xmlns=\"http://www.opengis.net/kml/2.2\">" << std::endl; 
+        outFile << "<Document>" << std::endl; 
         while (getline(inFile, strLine))
         {
-            //std::cout << strLine << std::endl;
             std::stringstream s_stream(strLine); 
-            std::getline(s_stream, strCountry, ','); //grabs the line we are on with s_stream, 
-                                                    //all the info up to the comma and puts it in country. 
-            
-            //std::cout << strCountry << std::endl; 
+            std::getline(s_stream, strCountry, ','); 
             std::getline(s_stream, strCapital, ',');
-            std::cout << strCountry << "~" << strCapital << std::endl; 
+            std::getline(s_stream, strLat, ',');
+            std::getline(s_stream, strLong, ',');
 
-            //I need to get lattitude and longitude by implementing strlat strlong 
-            //and I need to increment my record count  
+            name = strCapital + ", " + strCountry; 
+            std::cout << strCountry << "~" << strCapital << "~" << strLat << "~" << strLong << std::endl; 
+            
+            writePlacemark(outFile, name, strLat, strLong); 
+            recordCount++; 
+
         }
+
+        outFile << "</Document>" << std::endl; 
+        outFile << "</kml>" << std::endl; 
+
+        outFile.close(); 
     }
 
-    //call the WritePlacemark function to create a record 
-    //increment the count of recrods
-    //write any footer out 
     return recordCount;  
 
+}
+
+void writePlacemark(std::ofstream& kmlFile, std::string name, std::string latitude, std::string longitude)
+{
+    kmlFile << "<Placemark>" << std::endl; 
+    kmlFile << "<name>" << name << "</name>" << std::endl; 
+    kmlFile << "<Point><coordinates>" << longitude << "," << latitude << "</coordinates></Point>" << std::endl; 
+    kmlFile << "</Placemark>" << std:: endl; 
 }

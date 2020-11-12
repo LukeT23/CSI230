@@ -10,12 +10,11 @@
 */
 
 #include <iostream>
-#include <vector>
 #include <pwd.h>
 #include <unistd.h>
 #include <libgen.h>
 #include "util.hpp"
-#include "earth_utils.hpp"
+#include "earth_utils.h"
 
 using namespace std; 
 
@@ -94,9 +93,7 @@ int main(int argc, char* argv[])
                 }
                 else
                 {
-                    {
-                        optErr = true; 
-                    }
+                    optErr = true; 
                 }
                 
             }
@@ -119,7 +116,7 @@ int main(int argc, char* argv[])
         return EXIT_FAILURE; 
     }
 
-
+    
 
     cout << "The kml file is: " << kmlValue << " and logfile is: " << logValue << endl; 
     cout << "optErr: " << optErr << endl; 

@@ -37,8 +37,6 @@ bool log(std::string msg, std::string programName, std::ofstream& logFile)
 
 	//get program name take the info and headers from main and put them here
 
-	//std::string strProgramName; ADDED PROGNAME AS A PARAM TO THE FUNCTION
-
 	// get the pid take the info and headers from main and put them here
 	pid_t pid = getpid(); 
 	//get the hostname (I haven't shown you this) used a function called gethostname 

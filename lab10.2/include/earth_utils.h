@@ -27,7 +27,15 @@
 
 int processCSV(std::ifstream& inFile, std::string kmlFileName); 
 
-void writePlacemark(std::ofstream& kmlFile, std::string name, std::string latitude, std::string longitude, std::string elevation="0"); 
+/**
+* @brief Writes a placemark record into an existing kml file 
+* @date 11/12/2020
+* @param name std::string represents the concatenated Capital and Country   
+* @param latitude std::string representing latitude 
+* @param longitude std::string representing longitude 
+*/
+
+void writePlacemark(std::ofstream& kmlFile, std::string name, std::string latitude, std::string longitude); 
 //this won't return anything because it will only write one record. 
 //Notice that elevation="0" is not present in processCSV. This is needed for a kml file though. 
 
