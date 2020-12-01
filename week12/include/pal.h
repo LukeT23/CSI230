@@ -1,7 +1,6 @@
 /**
 * @file PAL.H
 * @brief  Palindrome Declarations 
-
 * @author Luke E. Tatro 
 * @credit written by: https://www.fayewilliams.com/2015/07/07/creating-a-shared-library/
 * @assignment Lecture 12.1
@@ -23,4 +22,4 @@
  */
 
 bool isPalindrome(char* word);
-#endif 
+#endif  
