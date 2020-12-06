@@ -7,10 +7,9 @@ INCLUDE := include
 LIB := lib
 
 LIBRARIES   :=
-EXECUTABLE  := main
-
+EXECUTABLE  := pal_driver
 SO_NAME := pal
-LIB_INSTALL_DIR := /usr/lib/X86_64-linux-gnu
+LIB_INSTALL_DIR := /usr/lib/x86_64-linux-gnu
 BIN_INSTALL_DIR := /usr/local/bin
 
 all: $(LIB)/lib$(SO_NAME).so $(BIN)/$(EXECUTABLE)
@@ -18,9 +17,6 @@ all: $(LIB)/lib$(SO_NAME).so $(BIN)/$(EXECUTABLE)
 run: clean all
 	clear
 	./$(BIN)/$(EXECUTABLE)
-
-
-	#lib/pal.so : src/pal/*.cpp
 
 $(LIB)/lib$(SO_NAME).so: $(SRC)/$(SO_NAME)/*.cpp
 	$(CXX) -fPIC -c -Wall -I$(INCLUDE) $^ -o $@ $(LIBRARIES)

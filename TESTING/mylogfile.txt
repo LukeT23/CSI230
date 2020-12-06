@@ -1,0 +1,32 @@
+Tue Nov 10 08:48:31 2020 pop-os main[5853]: The kmlfile is: mykmlfile.csv and logfile is: mylogfile.txt
+Tue Nov 10 10:46:28 2020 pop-os main[8201]: The kmlfile is: concap.csv and logfile is: mylogfile.txt
+Tue Nov 10 10:53:53 2020 pop-os main[8417]: The kmlfile is: concap.csv and logfile is: mylogfile.txt
+Tue Nov 10 10:57:39 2020 pop-os main[8541]: The kmlfile is: concap.csv and logfile is: mylogfile.txt
+Tue Nov 10 11:03:35 2020 pop-os main[8700]: The kmlfile is: concap.csv and logfile is: mylogfile.txt
+Tue Nov 10 11:04:03 2020 pop-os main[8743]: The kmlfile is: concap.csv and logfile is: mylogfile.txt
+Tue Nov 10 11:04:39 2020 pop-os main[8796]: The kmlfile is: concap.csv and logfile is: mylogfile.txt
+Tue Nov 10 15:14:12 2020 pop-os main[3699]: The kmlfile is: concap.csv and logfile is: mylogfile.txt
+Tue Nov 10 15:23:48 2020 pop-os main[3892]: The kmlfile is: concap.csv and logfile is: mylogfile.txt
+Wed Nov 11 20:30:43 2020 pop-os main[4165]: The kmlfile is: concap.csv and logfile is: mylogfile.txt
+Wed Nov 11 20:53:25 2020 pop-os main[4644]: The kmlfile is: concap.csv and logfile is: mylogfile.txt
+Wed Nov 11 21:11:40 2020 pop-os main[4963]: The kmlfile is: concap.csv and logfile is: mylogfile.txt
+Wed Nov 11 21:13:24 2020 pop-os main[5049]: The kmlfile is: concap.csv and logfile is: mylogfile.txt
+Wed Nov 11 21:16:27 2020 pop-os main[5166]: The kmlfile is: concap.csv and logfile is: mylogfile.txt
+Thu Nov 12 10:31:18 2020 pop-os main[4153]: The kmlfile is: concap.csv and logfile is: mylogfile.txt
+Thu Nov 12 10:33:46 2020 pop-os main[4235]: The kmlfile is: concap.csv and logfile is: mylogfile.txt
+Thu Nov 12 10:41:13 2020 pop-os main[4350]: The kmlfile is: concap.csv and logfile is: mylogfile.txt
+Fri Dec  4 09:43:44 2020 pop-os main[3170]: The kmlfile is: boxers.txt and logfile is: mylogfile.txt
+Sun Dec  6 15:48:01 2020 pop-os main[5487]: The kmlfile is: boxers.txt and logfile is: mylogfile.txt
+Sun Dec  6 15:57:28 2020 pop-os main[5752]: The text file is: boxers.txt and logfile is: mylogfile.txt
+Sun Dec  6 15:59:21 2020 pop-os main[5858]: The text file is: boxers.txt and logfile is: mylogfile.txt
+Sun Dec  6 16:03:43 2020 pop-os main[6011]: The text file is: boxers.txt and logfile is: mylogfile.txt
+Sun Dec  6 16:30:34 2020 pop-os main[7215]: The text file is: boxers.txt and logfile is: mylogfile.txt
+Sun Dec  6 16:30:56 2020 pop-os main[7233]: The text file is: bors.txt and logfile is: mylogfile.txt
+Sun Dec  6 16:31:48 2020 pop-os main[7276]: The text file is: bors.txt and logfile is: mylogfile.txt
+Sun Dec  6 16:32:10 2020 pop-os main[7294]: The text file is: boxers.txt and logfile is: mylogfile.txt
+Sun Dec  6 16:42:27 2020 pop-os pal_driver[7527]: The text file is: boxers.txt and logfile is: mylogfile.txt
+Sun Dec  6 16:42:40 2020 pop-os pal_driver[7554]: The text file is: boxers.txt and logfile is: mylogfile.txt
+Sun Dec  6 16:54:52 2020 pop-os pal_driver[8062]: The text file is: boxers.txt and logfile is: mylogfile.txt
+Sun Dec  6 16:56:56 2020 pop-os pal_driver[8449]: The text file is: boxers.txt and logfile is: mylogfile.txt
+Sun Dec  6 17:15:31 2020 pop-os pal_driver[8987]: The text file is: boxers.txt and logfile is: mylogfile.txt
+Sun Dec  6 17:46:31 2020 pop-os pal_driver[10777]: The text file is: boxers.txt and logfile is: mylogfile.txt
