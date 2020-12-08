@@ -89,7 +89,6 @@ public:
 
 	//UNKOWN GETTERS AND SETTERS 
 	int getAge() { return age; }
-//	int setAge(int birthMonth, int birthYear); //Will take in year and month to determine age 
 
 	int getGloves() { return gloves; }
 	void setGloves(int weight, int age); 

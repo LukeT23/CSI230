@@ -22,7 +22,7 @@ using namespace std;
 string Boxer::getDescription()
 {
 	int const WIDTH = 10; 
-	//int gWidth = 0; 
+
 	stringstream strStream;
 
 	string gSize = getGender(); 
@@ -36,10 +36,6 @@ string Boxer::getDescription()
 	int caAgeSize1 = this->rangeBuffer(getMinAge(), getBirthMonth(), 4);
 	int caAgeSize2 = this->rangeBuffer(getMaxAge(), getBirthMonth(), 4);
 	int caAgeBuffer = caAgeSize1 + caAgeSize2; 
-
-
-
-	//int width = 0;
 
 	strStream << getName() << setw(4) << " " << getGender() << setw(genderBuffer+6) << " " << getAge() << setw(ageBuffer + 11) << " " << getWeight() << setw(weightBuffer + 13) << " " << getGloves() << setw(18) << " " << getBouts();
 	strStream << setw(boutBuffer + 13) << " " << getMinAge() << " - " << getMaxAge() << setw(usAgeBuffer + 16) << " " << getMinAge() << "." << getBirthMonth() << " - " << getMaxAge() << "." << getBirthMonth();

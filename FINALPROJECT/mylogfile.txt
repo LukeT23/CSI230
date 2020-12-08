@@ -33,3 +33,13 @@ Mon Dec  7 20:08:34 2020 pop-os main[3969]: The text file is: boxers.txt and log
 Tue Dec  8 08:32:54 2020 pop-os main[4291]: The text file is: boxers.txt and logfile is: mylogfile.txt
 Tue Dec  8 09:04:45 2020 pop-os pal_driver[5219]: The text file is: boxers.txt and logfile is: mylogfile.txt
 Tue Dec  8 10:21:35 2020 pop-os pal_driver[7662]: The text file is: boxers.txt and logfile is: mylogfile.txt
+Tue Dec  8 10:32:19 2020 pop-os pal_driver[8097]: The text file is: boxers.txt and logfile is: mylogfile.txt
+Tue Dec  8 10:32:37 2020 pop-os pal_driver[8106]: The text file is: boxers.txt and logfile is: mylogfile.txt
+Tue Dec  8 10:35:33 2020 pop-os pal_driver[8151]: The text file is: CSI230/FINALPROJECT/boxers.txt and logfile is: CSI230/FINALPROJECT/mylogfile.txt
+Tue Dec  8 16:36:26 2020 pop-os pal_driver[2842]: The text file is: boxers.txt and logfile is: /home/luketatro/CSI230/GitHubRepository/CSI230/FINALPROJECT/mylogfile.txt
+Tue Dec  8 17:26:43 2020 pop-os pal_driver[3933]: The text file is: boxers.txt and logfile is: /home/luketatro/CSI230/GitHubRepository/CSI230/FINALPROJECT/mylogfile.txt
+Tue Dec  8 17:28:45 2020 pop-os pal_driver[3960]: The text file is: boxers.txt and logfile is: /home/luketatro/CSI230/GitHubRepository/CSI230/FINALPROJECT/mylogfile.txt
+Tue Dec  8 17:30:13 2020 pop-os pal_driver[3989]: The text file is: boxers.txt and logfile is: /home/luketatro/CSI230/GitHubRepository/CSI230/FINALPROJECT/mylogfile.txt
+Tue Dec  8 17:42:59 2020 pop-os pal_driver[4194]: The text file is: boxers.txt and logfile is: /home/luketatro/CSI230/GitHubRepository/CSI230/FINALPROJECT/mylogfile.txt
+Tue Dec  8 17:45:04 2020 pop-os pal_driver[4219]: The text file is: boxers.txt and logfile is: /home/luketatro/CSI230/GitHubRepository/CSI230/FINALPROJECT/mylogfile.txt
+Tue Dec  8 18:00:04 2020 pop-os pal_driver[4760]: The text file is: boxers.txt and logfile is: /home/luketatro/CSI230/GitHubRepository/CSI230/FINALPROJECT/mylogfile.txt
