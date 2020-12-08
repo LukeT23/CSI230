@@ -30,3 +30,5 @@ Sun Dec  6 16:54:52 2020 pop-os pal_driver[8062]: The text file is: boxers.txt a
 Sun Dec  6 16:56:56 2020 pop-os pal_driver[8449]: The text file is: boxers.txt and logfile is: mylogfile.txt
 Sun Dec  6 17:15:31 2020 pop-os pal_driver[8987]: The text file is: boxers.txt and logfile is: mylogfile.txt
 Sun Dec  6 17:46:31 2020 pop-os pal_driver[10777]: The text file is: boxers.txt and logfile is: mylogfile.txt
+Tue Dec  8 08:55:04 2020 pop-os pal_driver[5112]: The text file is: boxers.txt and logfile is: mylogfile.txt
+Tue Dec  8 08:58:38 2020 pop-os pal_driver[5152]: The text file is: boxers.txt and logfile is: mylogfile.txt

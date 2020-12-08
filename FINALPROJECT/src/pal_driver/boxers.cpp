@@ -22,24 +22,24 @@ using namespace std;
 string Boxer::getDescription()
 {
 	int const WIDTH = 10; 
-	int gWidth = 0; 
+	//int gWidth = 0; 
 	stringstream strStream;
 
 	string gSize = getGender(); 
 	int genderBuffer = WIDTH - gSize.size();
 
-	int ageBuffer = setBuffer(getAge(), 2); 
-	int boutBuffer = setBuffer(getBouts(), 2); 
-	int weightBuffer = setBuffer(getWeight(), 3); 
+	int ageBuffer = this->setBuffer(getAge(), 2); 
+	int boutBuffer = this->setBuffer(getBouts(), 2); 
+	int weightBuffer = this->setBuffer(getWeight(), 3); 
 
-	int usAgeBuffer = rangeBuffer(getMinAge(), getMaxAge(), 4);
-	int caAgeSize1 = rangeBuffer(getMinAge(), getBirthMonth(), 4);
-	int caAgeSize2 = rangeBuffer(getMaxAge(), getBirthMonth(), 4);
+	int usAgeBuffer = this->rangeBuffer(getMinAge(), getMaxAge(), 4);
+	int caAgeSize1 = this->rangeBuffer(getMinAge(), getBirthMonth(), 4);
+	int caAgeSize2 = this->rangeBuffer(getMaxAge(), getBirthMonth(), 4);
 	int caAgeBuffer = caAgeSize1 + caAgeSize2; 
 
 
 
-	int width = 0;
+	//int width = 0;
 
 	strStream << getName() << setw(4) << " " << getGender() << setw(genderBuffer+6) << " " << getAge() << setw(ageBuffer + 11) << " " << getWeight() << setw(weightBuffer + 13) << " " << getGloves() << setw(18) << " " << getBouts();
 	strStream << setw(boutBuffer + 13) << " " << getMinAge() << " - " << getMaxAge() << setw(usAgeBuffer + 16) << " " << getMinAge() << "." << getBirthMonth() << " - " << getMaxAge() << "." << getBirthMonth();
@@ -380,5 +380,33 @@ Boxer::Boxer(string name, Gender genderInt, int age, int birthMonth, int birthYe
 	setAgeRange(age);
 }
  
- 
+ int Boxer::rangeBuffer(int num1, int num2, int size)
+{
+	int retVal = 0; 
+	
+	string numWords = (to_string(num1) + to_string(num2));
 
+	int valueSize = (numWords.size());
+
+	if (valueSize < size)
+	{
+		retVal = size - valueSize;
+	}
+
+	return retVal;
+}
+
+int Boxer::setBuffer(int num, int size)
+{ 
+	string makeString = to_string(num); 
+	int valueSize = makeString.size(); 
+
+	int retVal = 0; 
+	
+		if (valueSize < size)
+		{
+			retVal = size - valueSize; 
+		}
+	
+	return retVal; 
+}

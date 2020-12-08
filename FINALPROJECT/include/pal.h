@@ -12,11 +12,11 @@
 #ifndef PAL_HPP
 #define PAL_HPP
 
-#include "boxers.h"
+//#include "boxers.h"
 #include <string>
-#include <vector>
+//#include <vector>
 #include <fstream>
-#include <sstream>
+//#include <sstream>
 
 using namespace std; 
 
@@ -32,28 +32,28 @@ using namespace std;
 
 bool log(std::string msg, std::string programName, std::ofstream& logFile); 
 
-int inputBoxers(vector<Boxer*>& boxers, Boxer* boxer, string fileName);
+// int inputBoxers(vector<Boxer*>& boxers, Boxer* boxer, string fileName);
 
-void outputBoxers(vector<Boxer*> const& boxers, string fileName); 
+// void outputBoxers(vector<Boxer*> const& boxers, string fileName); 
 
-void nukeVector(vector<Boxer*>& boxers); 
+// void nukeVector(vector<Boxer*>& boxers); 
 
-bool inputError(int min, int max, int input, string name, string message); 
+// bool inputError(int min, int max, int input, string name, string message); 
 
-void resizeName(string& name);
+// void resizeName(string& name);
 
-int calcAge(int birthMonth, int birthYear, int year, int month);
+// int calcAge(int birthMonth, int birthYear, int year, int month);
 
-string boxerDisplay(); 
+// string boxerDisplay(); 
 
-int rangeBuffer(int num1, int num2, int size); 
+// int rangeBuffer(int num1, int num2, int size); 
 
-int setBuffer(int age, int size); 
+// int setBuffer(int age, int size); 
 
-void tournaments(vector<Boxer*> const& boxers, ofstream& outFile);
+// void tournaments(vector<Boxer*> const& boxers, ofstream& outFile);
 
-void  tournamentEligible(Boxer* boxer, int tourYear, int tourMonth, int minAge, int maxAge, string message, ofstream& outFile);
+// void  tournamentEligible(Boxer* boxer, int tourYear, int tourMonth, int minAge, int maxAge, string message, ofstream& outFile);
 
-int tourYear(int num1, int num2, int numYear); 
+// int tourYear(int num1, int num2, int numYear); 
 
 #endif 

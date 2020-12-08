@@ -108,6 +108,10 @@ public:
 	int getMaxAge() { return maxAge; }
 	void setAgeRange(int age); 
 
+	int rangeBuffer(int num1, int num2, int size); 
+
+	int setBuffer(int age, int size); 
+
 	Boxer(); 
 	Boxer(string name, Gender gender, int age, int birthMonth, int birthYear, int weight, int bouts);
 	~Boxer(){}
