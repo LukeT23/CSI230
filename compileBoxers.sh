@@ -34,19 +34,16 @@ checkRoot
 #brief   checks if file exists and runs it through pal_driver program 
 
 if [ -e "$1" ]; then 
-  pal_driver -k "$1" -l /home/luketatro/CSI230/GitHubRepository/CSI230/FINALPROJECT/mylogfile.txt 
+  pal_driver -k "$1" -l /home/luketatro/CSI230/GitHubRepository/CSI230/BOXERS/mylogfile.txt 
 
 #brief   email myslef the new boxer info text and the logging information  
-        userEmail=lukeetatro@gmail.com 
-	hashPass= ###ADD IN HASH PASS 
-        #echo $user
-        echo $userEmail
+  userEmail=lukeetatro@gmail.com 
+  hashPass="rkfm fixq spkh nphc" ###ADD IN HASH PASS 
 	
-        email_body=$(cat /home/luketatro/CSI230/GitHubRepository/CSI230/FINALPROJECT/mylogfile.txt) 
-        email_subject="Boxer information from $1" 
-        echo -e "${email_body}" | s-nail -S smtp-use-starttls -S ssl-verify=ignore -S smtp-auth=login -S smtp="smtp.gmail.com:587" -S smtp-auth-user="lukeetatro@gmail.com" -S smtp-auth-password="${hashPass}" -r "lukeetatro@gmail.com" -a boxers_info.txt -s "${email_subject}" -. "${userEmail}"
+  email_body=$(cat /home/luketatro/CSI230/GitHubRepository/CSI230/BOXERS/mylogfile.txt) 
+  email_subject="Boxer information from $1" 
+  echo -e "${email_body}" | s-nail -S smtp-use-starttls -S ssl-verify=ignore -S smtp-auth=login -S smtp="smtp.gmail.com:587" -S smtp-auth-user="lukeetatro@gmail.com" -S smtp-auth-password="${hashPass}" -r "lukeetatro@gmail.com" -a boxers_info.txt -s "${email_subject}" -. "${userEmail}"
 
- #done
 else 
   echo "File ${1} does not exist. Please use a different file." >&2 
 fi 

@@ -1,5 +1,5 @@
 /**
-* @file boxers.cpp
+* @file pal_driver.cpp
 * @brief  Linux Final Project 
 * Runs the program taking in a file name and outputting it into a new file 
 * @author Luke E. Tatro
@@ -209,7 +209,7 @@ int main(int argc, char* argv[])
             if (flog)
             {
                 std::string programName = basename(argv[0]); 
-                std::string msg = "The text file is: " + boxerFile + " and logfile is: " + logValue; 
+                std::string msg = "The text file is: " + boxerFile; 
                 log(msg, programName, flog); 
                 optErr = false;
                 flog.close(); 
@@ -267,7 +267,7 @@ int main(int argc, char* argv[])
 
     
 
-    cout << "The kml file is: " << boxerFile << " and logfile is: " << logValue << endl; 
+    cout << "The boxer file is: " << boxerFile << endl; 
     cout << "optErr: " << optErr << endl; 
 
 
@@ -371,27 +371,14 @@ void outputBoxers(vector<Boxer*> const& boxers, string fileName)
 void nukeVector(vector<Boxer*>& boxers)
 {
 	int vecSize = boxers.size();
-	//cout << "VECTOR SIZE IS: " << vecSize << endl; 
-	////cout << "NUKING USERS " << endl; 
 
-	//for (int i = 0; i < vecSize; i++)
-	//{
-	//	//cout << boxers[i]->getDescription() << endl;
-	//}
-
-
-	for (int i = 0; i < vecSize; i++)
+	for (int i = vecSize - 1; i >= 0; i--)
 	{
-	//	cout << boxers[i]->getDescription() << endl; 
 		delete boxers[i]; 
 		boxers[i] = nullptr; 
-		//boxers.erase(boxers.begin() + i); 
-	//	cout << "VECTOR SIZE IS: " << boxers.size() << endl;
+		boxers.erase(boxers.begin() + i); 
 	}
-	//cout << "VECTOR SIZE IS: " << boxers.size() << endl;
-	//cout << "CLEARING VECTOR" << endl;
 	boxers.clear(); 
-	//cout << "VECTOR SIZE IS: " << boxers.size() << endl;
 }
 
 bool inputError(int min, int max, int input, string name, string message)

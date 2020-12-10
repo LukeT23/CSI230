@@ -27,8 +27,31 @@ Sun Dec  6 16:32:10 2020 pop-os main[7294]: The text file is: boxers.txt and log
 Sun Dec  6 16:42:27 2020 pop-os pal_driver[7527]: The text file is: boxers.txt and logfile is: mylogfile.txt
 Sun Dec  6 16:42:40 2020 pop-os pal_driver[7554]: The text file is: boxers.txt and logfile is: mylogfile.txt
 Sun Dec  6 16:54:52 2020 pop-os pal_driver[8062]: The text file is: boxers.txt and logfile is: mylogfile.txt
-Sun Dec  6 16:56:56 2020 pop-os pal_driver[8449]: The text file is: boxers.txt and logfile is: mylogfile.txt
-Sun Dec  6 17:15:31 2020 pop-os pal_driver[8987]: The text file is: boxers.txt and logfile is: mylogfile.txt
-Sun Dec  6 17:46:31 2020 pop-os pal_driver[10777]: The text file is: boxers.txt and logfile is: mylogfile.txt
-Tue Dec  8 08:55:04 2020 pop-os pal_driver[5112]: The text file is: boxers.txt and logfile is: mylogfile.txt
-Tue Dec  8 08:58:38 2020 pop-os pal_driver[5152]: The text file is: boxers.txt and logfile is: mylogfile.txt
+Sun Dec  6 17:41:46 2020 pop-os pal_driver[10343]: The text file is: boxers.txt and logfile is: mylogfile.txt
+Mon Dec  7 20:08:02 2020 pop-os main[3938]: The text file is: boxers.txt and logfile is: mylogfile.txt
+Mon Dec  7 20:08:34 2020 pop-os main[3969]: The text file is: boxers.txt and logfile is: mylogfile.txt
+Tue Dec  8 08:32:54 2020 pop-os main[4291]: The text file is: boxers.txt and logfile is: mylogfile.txt
+Tue Dec  8 09:04:45 2020 pop-os pal_driver[5219]: The text file is: boxers.txt and logfile is: mylogfile.txt
+Tue Dec  8 10:21:35 2020 pop-os pal_driver[7662]: The text file is: boxers.txt and logfile is: mylogfile.txt
+Tue Dec  8 10:32:19 2020 pop-os pal_driver[8097]: The text file is: boxers.txt and logfile is: mylogfile.txt
+Tue Dec  8 10:32:37 2020 pop-os pal_driver[8106]: The text file is: boxers.txt and logfile is: mylogfile.txt
+Tue Dec  8 10:35:33 2020 pop-os pal_driver[8151]: The text file is: CSI230/FINALPROJECT/boxers.txt and logfile is: CSI230/FINALPROJECT/mylogfile.txt
+Tue Dec  8 16:36:26 2020 pop-os pal_driver[2842]: The text file is: boxers.txt and logfile is: /home/luketatro/CSI230/GitHubRepository/CSI230/FINALPROJECT/mylogfile.txt
+Tue Dec  8 17:26:43 2020 pop-os pal_driver[3933]: The text file is: boxers.txt and logfile is: /home/luketatro/CSI230/GitHubRepository/CSI230/FINALPROJECT/mylogfile.txt
+Tue Dec  8 17:28:45 2020 pop-os pal_driver[3960]: The text file is: boxers.txt and logfile is: /home/luketatro/CSI230/GitHubRepository/CSI230/FINALPROJECT/mylogfile.txt
+Tue Dec  8 17:30:13 2020 pop-os pal_driver[3989]: The text file is: boxers.txt and logfile is: /home/luketatro/CSI230/GitHubRepository/CSI230/FINALPROJECT/mylogfile.txt
+Tue Dec  8 17:42:59 2020 pop-os pal_driver[4194]: The text file is: boxers.txt and logfile is: /home/luketatro/CSI230/GitHubRepository/CSI230/FINALPROJECT/mylogfile.txt
+Tue Dec  8 17:45:04 2020 pop-os pal_driver[4219]: The text file is: boxers.txt and logfile is: /home/luketatro/CSI230/GitHubRepository/CSI230/FINALPROJECT/mylogfile.txt
+Tue Dec  8 18:00:04 2020 pop-os pal_driver[4760]: The text file is: boxers.txt and logfile is: /home/luketatro/CSI230/GitHubRepository/CSI230/FINALPROJECT/mylogfile.txt
+Wed Dec  9 07:51:59 2020 pop-os pal_driver[3599]: The text file is: boxers.txt and logfile is: mylogfile.txt
+Wed Dec  9 07:55:03 2020 pop-os pal_driver[3696]: The text file is: boxers.txt
+Wed Dec  9 07:55:56 2020 pop-os pal_driver[3754]: The text file is: boxers.txt
+Wed Dec  9 08:23:45 2020 pop-os pal_driver[4530]: The text file is: boxers.txt
+Wed Dec  9 08:24:11 2020 pop-os pal_driver[4567]: The text file is: boxers.txt
+Wed Dec  9 08:26:20 2020 pop-os pal_driver[4631]: The text file is: boxers.txt
+Thu Dec 10 15:28:35 2020 pop-os pal_driver[4325]: The text file is: boxers.txt
+Thu Dec 10 15:54:06 2020 pop-os pal_driver[4731]: The text file is: boxers.txt
+Thu Dec 10 16:07:32 2020 pop-os pal_driver[5215]: The text file is: boxers.txt
+Thu Dec 10 16:07:50 2020 pop-os pal_driver[5238]: The text file is: boxers.txt
+Thu Dec 10 16:39:19 2020 pop-os pal_driver[6078]: The text file is: boxers.txt
+Thu Dec 10 16:46:18 2020 pop-os pal_driver[6362]: The text file is: boxers.txt

@@ -1,0 +1,42 @@
+NAME       GENDER       AGE       WEIGHT       GLOVE SIZE       BOUTS       USA AGES       CA AGES       US ROUNDS       CA ROUNDS
+Cora       female       13        115          10               8           11 - 15        11.4 - 15.4   1.5 min         1.5 min
+Jacob      male         13        90           10               8           11 - 15        11.11 - 15.11 1.5 min         1.5 min
+Rich       male         30        165          12               4           18 - 35        18.3 - 35.3   3.0 min         2.0 min
+Aiden      male         16        130          10               1           14 - 17        14.3 - 17.3   2.0 min         2.0 min
+Nathaniel  male         14        120          10               3           12 - 16        12.8 - 16.8   1.5 min         1.5 min
+Liam       male         8         70           10               0           8 - 9          8.4 - 9.4     1.0 min         1.0 min
+Levi       male         12        120          10               0           10 - 14        10.8 - 14.8   1.0 min         1.0 min
+Lisa       female       30        200          12               11          18 - 35        18.2 - 35.2   3.0 min         3.0 min
+Tyler      male         29        175          12               4           18 - 35        18.7 - 35.7   3.0 min         2.0 min
+
+ELIGIBLE TOURNAMENTS
+
+Cora      
+USA Silver Gloves 5/2021
+
+Jacob     
+USA Silver Gloves 5/2021
+
+Rich      
+USA Golden Gloves 3/2021
+CA Silver Gloves 10/2021
+
+Aiden     
+USA Golden Gloves 3/2021
+
+Nathaniel 
+USA Silver Gloves 5/2021
+
+Liam      
+
+Levi      
+USA Silver Gloves 5/2021
+
+Lisa      
+USA Golden Gloves 3/2021
+CA Silver Gloves 10/2021
+
+Tyler     
+USA Golden Gloves 3/2021
+CA Silver Gloves 10/2021
+
