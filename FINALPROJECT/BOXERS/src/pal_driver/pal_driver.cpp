@@ -72,8 +72,8 @@ int main(int argc, char* argv[])
             flog.open(logValue, ios_base::app); 
             if (flog)
             {
-                std::string programName = basename(argv[0]); 
-                std::string msg = "The text file is: " + boxerFile; 
+                string programName = basename(argv[0]); 
+                string msg = "The text file is: " + boxerFile; 
                 log(msg, programName, flog); 
                 optErr = false;
                 flog.close(); 
