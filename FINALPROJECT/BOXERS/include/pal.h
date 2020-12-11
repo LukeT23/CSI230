@@ -2,7 +2,7 @@
 /**
 * @file pal.h 
 * @brief  Linux Final Project 
-* handles declarations for functions used to to process class object data 
+* handles declaration for log function
 * @author Luke E. Tatro 
 * @Linux Final Project 
 * @date 12/1/2020
@@ -14,6 +14,9 @@
 
 #include <string>
 #include <fstream>
+#include <iostream>
+#include <ctime> 
+#include <unistd.h>
 
 using namespace std; 
 

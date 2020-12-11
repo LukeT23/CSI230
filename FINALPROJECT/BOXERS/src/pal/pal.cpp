@@ -9,10 +9,6 @@
 */
 
 #include "pal.h"
-#include <iostream>
-#include <string>
-#include <ctime> 
-#include <unistd.h>
 
 using  namespace std; 
 

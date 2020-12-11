@@ -9,13 +9,7 @@
 */
 
 #include "boxers.h"
-#include "pal.h"
-#include <sstream> 
-#include <fstream> 
-#include <iostream> 
 
- 
-#include <iomanip>
 
 using namespace std; 
 
@@ -37,9 +31,9 @@ string Boxer::getDescription()
 	int caAgeSize2 = this->rangeBuffer(getMaxAge(), getBirthMonth(), 4);
 	int caAgeBuffer = caAgeSize1 + caAgeSize2; 
 
-	strStream << getName() << setw(4) << " " << getGender() << setw(genderBuffer+6) << " " << getAge() << setw(ageBuffer + 11) << " " << getWeight() << setw(weightBuffer + 13) << " " << getGloves() << setw(18) << " " << getBouts();
-	strStream << setw(boutBuffer + 13) << " " << getMinAge() << " - " << getMaxAge() << setw(usAgeBuffer + 16) << " " << getMinAge() << "." << getBirthMonth() << " - " << getMaxAge() << "." << getBirthMonth();
-	strStream << setw(caAgeBuffer + 9) << " " << setiosflags(ios::fixed) << setprecision(1) << getRoundLengthUsa() << " minutes" << setw(12) << " " << setprecision(1) << getRoundLengthCa() << " minutes";
+	strStream << getName() << setw(1) << " " << getGender() << setw(genderBuffer+3) << " " << getAge() << setw(ageBuffer + 8) << " " << getWeight() << setw(weightBuffer + 10) << " " << getGloves() << setw(15) << " " << getBouts();
+	strStream << setw(boutBuffer + 10) << " " << getMinAge() << " - " << getMaxAge() << setw(usAgeBuffer + 8) << " " << getMinAge() << "." << getBirthMonth() << " - " << getMaxAge() << "." << getBirthMonth();
+	strStream << setw(caAgeBuffer + 1) << " " << setiosflags(ios::fixed) << setprecision(1) << getRoundLengthUsa() << " min" << setw(9) << " " << setprecision(1) << getRoundLengthCa() << " min";
 
 	return strStream.str();
 }
@@ -78,6 +72,37 @@ void Boxer::setGloves(int weight, int age)
 			this->gloves = 12;
 		}
 	}
+}
+
+int Boxer::rangeBuffer(int num1, int num2, int size)
+{
+	int retVal = 0; 
+	
+	string numWords = (to_string(num1) + to_string(num2));
+
+	int valueSize = (numWords.size());
+
+	if (valueSize < size)
+	{
+		retVal = size - valueSize;
+	}
+
+	return retVal;
+}
+
+int Boxer::setBuffer(int num, int size)
+{ 
+	string makeString = to_string(num); 
+	int valueSize = makeString.size(); 
+
+	int retVal = 0; 
+	
+		if (valueSize < size)
+		{
+			retVal = size - valueSize; 
+		}
+	
+	return retVal; 
 }
 
 void Boxer::setRoundLengthUsa(int age)
@@ -340,6 +365,7 @@ void Boxer::setAgeRange(int age)
 	}
 }
 
+
 Boxer::Boxer()
 {
 	this->name = "Bob"; 
@@ -374,35 +400,4 @@ Boxer::Boxer(string name, Gender genderInt, int age, int birthMonth, int birthYe
 	setRoundLengthCa(age, novice);
 	setWeightRange(weight);
 	setAgeRange(age);
-}
- 
- int Boxer::rangeBuffer(int num1, int num2, int size)
-{
-	int retVal = 0; 
-	
-	string numWords = (to_string(num1) + to_string(num2));
-
-	int valueSize = (numWords.size());
-
-	if (valueSize < size)
-	{
-		retVal = size - valueSize;
-	}
-
-	return retVal;
-}
-
-int Boxer::setBuffer(int num, int size)
-{ 
-	string makeString = to_string(num); 
-	int valueSize = makeString.size(); 
-
-	int retVal = 0; 
-	
-		if (valueSize < size)
-		{
-			retVal = size - valueSize; 
-		}
-	
-	return retVal; 
 }
