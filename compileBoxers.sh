@@ -38,7 +38,7 @@ if [ -e "$1" ]; then
 
 #brief   email myslef the new boxer info text and the logging information  
   userEmail=lukeetatro@gmail.com 
-  hashPass="rkfm fixq spkh nphc" ###ADD IN HASH PASS 
+  hashPass= ###ADD IN HASH PASS 
 	
   email_body=$(cat /home/luketatro/CSI230/GitHubRepository/CSI230/BOXERS/mylogfile.txt) 
   email_subject="Boxer information from $1" 

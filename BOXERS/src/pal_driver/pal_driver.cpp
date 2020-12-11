@@ -12,15 +12,7 @@
 #include "pal.h"
 #include "boxers.h"
 #include "utils.h"
-#include "boost/date_time/gregorian/gregorian.hpp"
-#include <iostream>
-#include <vector>
-#include <string>
-#include <iomanip> 
-#include <pwd.h>
-#include <unistd.h>
-#include <libgen.h>
-
+#include "boost/date_time/gregorian/gregorian.hpp" //EXTERNAL LIBRARY 
 
 using namespace std; 
 
