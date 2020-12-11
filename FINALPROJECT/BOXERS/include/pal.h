@@ -24,8 +24,8 @@ using namespace std;
 * @brief creates a discrete syslog message
 * @date 12/3/2020
 * @return returns a boolean indicating the message was written ok 
-* @param msg std:string countaining syslog message
-* @param programName std:stringcontaining the program name
+* @param msg string countaining syslog message
+* @param programName stringcontaining the program name
 * @param logFile ofstream reference, validation of this file is epxected 
 */
 

@@ -52,66 +52,26 @@ private:
 
 public:
 
-	/**
-	* @brief Puts all boxer's info in readable format  
-	* @date 12/10/2020
-	* @return returns a string of the boxer's info 
-	*/
+	//SETTERS AND GETTERS 
 
 	string getDescription(); 
 
-	/**
-	* @brief Used to set and get the number of bouts(fights) a boxer has had 
-	* @date 12/10/2020
-	* @return returns the number of bouts 
-	* @param int bouts used to set the number of fights a boxer has had 
-	*/
-
+	//Retrieve the number of fights a boxer has had 
 	int getBouts() { return bouts;  }
 	void setBouts(int bouts) { this->bouts = bouts;  }
 
-	/**
-	* @brief Used to set and get if a boxer is Novice (less than 10 fights) 
-	* @date 12/10/2020
-	* @return returns a bool as true if boxer's fights are less than 10 
-	* @param int bouts to enter the number of fights a boxer has had 
-	*/
-
+	//Determine if a boxer is Novice (Less than 10 fights)
 	bool getNovice() { return novice; }
 	void setNovice(int bouts); 
 
-	/**
-	* @brief Used to set and get the size of gloves a boxer needs  
-	* @date 12/10/2020
-	* @return returns an int as the weight of the boxer's gloves 
-	* @param int weight to take in the boxer's weight 
-	* @param int age to take in the boxer's age 
-	*/
-
+	//Determine boxer's glove weight in ounces
 	int getGloves() { return gloves; }
 	void setGloves(int weight, int age); 
 
-	/**
-	* @brief Used to set a space buffer between a range of integer values in getDescription 
-	* @date 12/10/2020
-	* @return returns an int that will be used as a space buffer 
-	* @param int num1 and num2 are converted into strings and combined to determine the total
-	*			 character length of the numbers 
-	* @param int size is used to compare the total character length of numbers to determine how 
-	*			 large the buffer must be 
-	*/
-
+	//Set a space buffer for values in getDescription that are ranges such as age bracket and weight division 
 	int rangeBuffer(int num1, int num2, int size); 
 
-	/**
-	* @brief Used to set a space buffer between single integer values in getDescription 
-	* @date 12/10/2020
-	* @return returns an int that will be used as a space buffer 
-	* @param int num1 is converted into a string determine the character length of the number 
-	* @param int size is used to compare the character length of number to determine how 
-	*			 large the buffer must be 
-	*/
-
+	//Sets a space buffer so single integer values such as weight and glove size
 	int setBuffer(int num, int size); 
 
 
