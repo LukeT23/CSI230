@@ -28,12 +28,8 @@ int main(int argc, char* argv[])
     string boxerFile; 
     bool optErr = true; 
 
-    string coraName = "Cora"; 
-    resizeName(coraName); 
     vector<Boxer*> gymBoxers;
-    Boxer* boxer = new Boxer(coraName, Gender::FEMALE, 13, 4, 2007, 115, 8); 
-    gymBoxers.push_back(boxer);
-
+    Boxer* boxer = nullptr; 
 
     while((opt = getopt(argc, argv, "k:l:")) != EOF)
     {

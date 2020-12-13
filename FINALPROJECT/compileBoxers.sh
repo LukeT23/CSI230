@@ -33,12 +33,17 @@ checkRoot
 
 #brief   checks if file exists and runs it through pal_driver program 
 
-if [ -e "$1" ]; then 
+if [ -e "$1" ]; then
+  #brief   code to request user to enter in the hash password for the attached email account 
+  echo "Enter your hash password" 
+  read -s hashPass 
+  echo " " 
+
+  #brief   PalDriver program to run C++ code
   pal_driver -k "$1" -l /home/luketatro/CSI230/GitHubRepository/CSI230/FINALPROJECT/BOXERS/mylogfile.txt 
 
 #brief   email myslef the new boxer info text and the logging information  
   userEmail=lukeetatro@gmail.com 
-  hashPass= ###ADD IN HASH PASS 
 	
   email_body=$(cat /home/luketatro/CSI230/GitHubRepository/CSI230/FINALPROJECT/BOXERS/mylogfile.txt) 
   email_subject="Boxer information from $1" 

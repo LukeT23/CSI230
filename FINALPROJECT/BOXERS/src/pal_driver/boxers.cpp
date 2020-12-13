@@ -162,12 +162,12 @@ void Boxer::setRoundLengthCa(int age, bool novice)
 
 		if (age == 15 || age == 16)
 		{
-			this->roundLengthUsa = 2;
+			this->roundLengthCa = 2;
 		}
 
 		if (age == 13 || age == 14)
 		{
-			this->roundLengthUsa = 1.5;
+			this->roundLengthCa = 1.5;
 		}
 
 		if (age < 13)

@@ -79,3 +79,12 @@ Fri Dec 11 07:50:27 2020 pop-os pal_driver[2919]: The text file is: boxers.txt
 Fri Dec 11 07:54:35 2020 pop-os pal_driver[3410]: The text file is: boxers.txt
 Fri Dec 11 08:22:59 2020 pop-os pal_driver[3887]: The text file is: boxers.txt
 Fri Dec 11 08:24:53 2020 pop-os pal_driver[3937]: The text file is: boxers.txt
+Fri Dec 11 13:45:17 2020 pop-os pal_driver[3067]: The text file is: boxers.txt
+Fri Dec 11 13:46:14 2020 pop-os pal_driver[3093]: The text file is: boxers.txt
+Fri Dec 11 13:46:59 2020 pop-os pal_driver[3120]: The text file is: boxers.txt
+Fri Dec 11 13:47:27 2020 pop-os pal_driver[3145]: The text file is: boxers.txt
+Fri Dec 11 13:52:41 2020 pop-os pal_driver[3353]: The text file is: boxers.txt
+Fri Dec 11 14:00:42 2020 pop-os pal_driver[3474]: The text file is: boxers.txt
+Fri Dec 11 14:04:50 2020 pop-os pal_driver[3999]: The text file is: boxers.txt
+Fri Dec 11 14:20:59 2020 pop-os pal_driver[4713]: The text file is: boxers.txt
+Fri Dec 11 14:23:34 2020 pop-os pal_driver[4795]: The text file is: boxers.txt
